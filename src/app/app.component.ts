@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'i18n';
+  title: string = 'Intro_angular_i18n';
+
+  public changeLanguage(code: string) {
+    localStorage.setItem('locale', code);
+    window.location.reload();
+  }
 }
